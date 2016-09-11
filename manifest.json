@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	
+	"name": "Deezer StopAfterCurrent",
+	"description": "Adds menu to Deezer web player enabling you to pause after current track or defined number of tracks finishes",
+	"version": "0.1",
+	
+	"content_scripts": [
+		{
+			"matches": ["*://*.deezer.com/*"],
+			"js": ["scripts/cs.js"],
+			"css": ["styles/sac.css"],
+			"run_at": "document_start"
+		}
+	],
+	
+	"web_accessible_resources": [
+		"scripts/addSac.js"
+	]
+}
